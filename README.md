@@ -1,8 +1,8 @@
 # 2023-AI-Samsung-Challenge-Image-Quality-Assessment
 
-![image](https://hackmd.io/_uploads/B1mbT0BQC.png)
+![image](iqa.png)
 
-![image](https://hackmd.io/_uploads/SJCb60BQC.png)
+![image](ic.png)
 
 ## Datasets
 
@@ -13,10 +13,8 @@ All the models in this project were evaluated on the following datasets:
 ## Description
 
 The source code for this solution is based on these two repositories:
-
-- [M2 Transformer](https://github.com/aimagelab/meshed-memory-transformer): for image captioning task (task 1)
-- [MANIQA](https://github.com/IIGROUP/MANIQA): for image quality assessment task (task 2)
-
+- [MANIQA](https://github.com/IIGROUP/MANIQA): for image quality assessment task (task 1)
+- [M2 Transformer](https://github.com/aimagelab/meshed-memory-transformer): for image captioning task (task 2)
 
 ## How to run
 
@@ -78,25 +76,7 @@ After that, we obtain two hdf5 files: `train.hdf5` and `test.hdf5` for training 
 * Download `scene_graph_benchmark` [here](https://drive.google.com/file/d/16kjIOgBg9cwpF8ay9-g1tdpBOxYleBTR/view?usp=sharing) and put inside the `MANIQA` folder (used for feature extraction purpose)
 * Download pre-trained checkpoint [here](https://drive.google.com/file/d/16kjIOgBg9cwpF8ay9-g1tdpBOxYleBTR/view?usp=sharing), and put inside `grid-feats-vqa` folder.
 
-### Training phase for image captioning (task 1)
-
-To train the image captioning task, use the below command:
-
-1. Go to the RSTNet folder:
-
-```
-cd RSTNet
-```
-
-2. Train the image captioning model:
-
-```
-CUDA_VISIBLE_DEVICE=0 python train_transformer.py --exp_name rstnet --batch_size 50 --m 40 --head 8 --features_path train.hdf5
-```
-
-3. The checkpoints will be saved at `saved_transformer_models_m2`
-
-### Training phase for image quality assessment (task 2)
+### Training phase for image quality assessment (task 1)
 
 To train the image quality assessment task, use the below command:
 
@@ -113,6 +93,24 @@ CUDA_VISIBLE_DEVICE=0 python train_maniqa_new_vit_Joint2.py
 ```
 
 3. Checkpoint will be saved at: `MANIQA_new_vit_or_joint2` folder.
+
+### Training phase for image captioning (task 2)
+
+To train the image captioning task, use the below command:
+
+1. Go to the RSTNet folder:
+
+```
+cd RSTNet
+```
+
+2. Train the image captioning model:
+
+```
+CUDA_VISIBLE_DEVICE=0 python train_transformer.py --exp_name rstnet --batch_size 50 --m 40 --head 8 --features_path train.hdf5
+```
+
+3. The checkpoints will be saved at `saved_transformer_models_m2`
 
 ### End-to-end inference phase
 
@@ -131,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python end_to_end_inference.py
 
 Results are stored in `Full_submission.csv`, which is ready for submission. The results helped us to secure the final third ranking (fourth ranking on the final leaderboard)
 
-![image](https://hackmd.io/_uploads/HySEc0rX0.png)
+![image](leaderboard.png)
 
 First 20 rows of final submission:
 
