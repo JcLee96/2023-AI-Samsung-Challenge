@@ -22,7 +22,7 @@ Install dependencies
 
 ```bash
 # clone project
-git clone https://github.com/Leejucheon96/2022-AI-Samsung-Challenage.git
+git clone https://github.com/JuLee96/2023-AI-Samsung-Challenge-Image-Quality-Assessment.git
 
 
 # [OPTIONAL] create conda environment
