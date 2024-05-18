@@ -1,0 +1,4 @@
+einops==0.6.1
+h5py==3.9.0
+fvcore==0.1.5.post20221221
+git+https://github.com/facebookresearch/detectron2.git@ffff8ac
