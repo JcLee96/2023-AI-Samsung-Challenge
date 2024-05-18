@@ -257,10 +257,10 @@ if __name__ == '__main__':
         # load & save checkpoint
         "model_name": "samsung",
         "type_name": "samsung",
-        "ckpt_path": "/data2/samsung_IC/MANIQA_new_vit_or_joint2/",               # directory for saving checkpoint
-        "log_path": "./data2/samsung_IC/MANIQA_new_vit_or_joint2/log/",
+        "ckpt_path": "./MANIQA_new_vit_or_joint2/",               # directory for saving checkpoint
+        "log_path": "./MANIQA_new_vit_or_joint2/log/",
         "log_file": ".log",
-        "tensorboard_path": "/data2/samsung_IC/MANIQA_new_vit_or_joint2/tensorboard/"
+        "tensorboard_path": "./MANIQA_new_vit_or_joint2/tensorboard/"
     })
     
     config.log_file = config.model_name + ".log"
@@ -295,13 +295,13 @@ if __name__ == '__main__':
     # data load
     train_dataset = Dataset.samsung_ordinal(
         csv_file=dis_train_path,
-        root='../samsung_LK99/dataset/train/',
+        root='./data/train/',
         transform=transforms.Compose([
             Normalize(0.5, 0.5), RandHorizontalFlip(prob_aug=config.prob_aug), ToTensor()]),
     )
     val_dataset = Dataset.samsung_ordinal(
         csv_file=dis_val_path,
-        root='../samsung_LK99/dataset/train/',
+        root='./data/train/',
         transform=transforms.Compose([
             Normalize(0.5, 0.5), ToTensor()]),
     )
