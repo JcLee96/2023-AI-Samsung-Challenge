@@ -46,8 +46,6 @@ docker run -d --shm-size 8G --gpus '"device=all"' -it --name samsung_quill_conta
 
 For `data` path, please see how to prepare in the upcomming instructions below.
 
-## How to run
-
 ### Data preparation
 
 Step 1: Download the data from the challenge website, including training and testing samples, as below structure:
