@@ -71,8 +71,8 @@ After that, we obtain two hdf5 files: `train.hdf5` and `test.hdf5` for training 
 
 ### External code preparation
 
-* Download `scene_graph_benchmark` [here](https://drive.google.com/file/d/16kjIOgBg9cwpF8ay9-g1tdpBOxYleBTR/view?usp=sharing) and put inside the `MANIQA` folder (used for feature extraction purpose)
-* Download pre-trained checkpoint [here](https://drive.google.com/file/d/16kjIOgBg9cwpF8ay9-g1tdpBOxYleBTR/view?usp=sharing), and put inside `grid-feats-vqa` folder.
+* Download `scene_graph_benchmark` [here](https://drive.google.com/file/d/1OCrRdll9MEg2TponCf9dWLwUkxkCwAkO/view?usp=drive_link) and put inside the `MANIQA` folder (used for feature extraction purpose)
+* Download pre-trained checkpoint [here](https://drive.google.com/file/d/1OCrRdll9MEg2TponCf9dWLwUkxkCwAkO/view?usp=drive_link), and put inside `grid-feats-vqa` folder.
 
 ### Training phase for image quality assessment (task 1)
 
